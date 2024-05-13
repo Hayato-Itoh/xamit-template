@@ -1,0 +1,189 @@
+\documentclass[a4paper,twocolumn]{xamit}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{amsmath, amssymb, mathrsfs} % for mathematical writing with AMS-LaTeX
+\usepackage{bm} % for bold fond in equations
+\usepackage{cases} % for cases in equations
+\usepackage{url} % for url descriptions
+\usepackage{newtxtext,newtxmath} %for Times New Roman
+\usepackage{subfigure} % for multiple figure presentation
+
+\AtBeginDocument{
+  \abovedisplayskip=0.1\abovedisplayskip
+  \abovedisplayshortskip=0.1\abovedisplayshortskip
+  \belowdisplayskip=0.1\belowdisplayskip
+  \belowdisplayshortskip=0.1\belowdisplayshortskip}
+
+\makeatletter
+\def\setcaption#1{\def\@captype{#1}}
+\makeatother
+
+%%% タイトル・著者・所属・要旨 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Title{
+JAMIT大会予稿タイトル
+}
+
+\TitleE{
+English Title
+}
+
+\Abstract{
+この部分に400字以内で和文要旨を書いてください．あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+}
+\Keywords{テンプレート，フォーマット（5語以内）}
+
+\Author{
+\Authorentry{山田　太郎}[1], \ \
+\Authorentry{鈴木　次郎}[2]
+}
+\Affiliate{
+\Affiliation[1]{筑波大学大学院システム情報工学研究科コンピュータサイエンス専攻\\}
+\Affiliation[2]{(株)医用画像研究所\\}
+}
+
+\AuthorE{
+\Authorentry{Taro YAMADA}[1],
+\Authorentry{Jiro SUZUKI}[2]
+}
+\AbstractE{
+Hoge
+}
+\KeywordsE{template, format, font, font size, margin}
+\AffiliateE{
+\AffiliationE[1]{University of Tsukuba\\}
+\AffiliationE[2]{Medical Imaging Laboratories, Ltd.}
+}
+%..............................................................................................................................%
+
+
+
+%%% 原稿本文 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\MakeTitle
+\fontsize{9bp}{15bp}\selectfont
+
+\section{はじめに}
+pLaTeX2eで執筆される方は自己責任でこのフォーマットをご利用ください．なお，この書式は変更しないでください（フォントの大きさ，ページサイズ，段組，文字領域，行間，余白など，このスタイルを守ってください）著者の所属，住所，電子メールアドレス等を1ページ目に書いてください．
+
+JAMIT大会予稿は2ページでご執筆をお願い致します．大会査読付論文制度を利用される場合は2ページを超えてご執筆いただけます．この制度への投稿論文に対しては，MIT誌規定通りの正規の査読がなされますが，早めに出版できるように査読のプロセスを工夫しております．論文採録後にフォーマットの変更をお願いする場合があります．
+
+
+\section{本文の書き方}
+本文は原則として2段組（1行あたり約24字）でお書きください．ただし，図表の配置などの関係でうまくいかない場合は，1段組みでも構いません．その場合は1行あたり約48字でお書きください．また，本テンプレートはA4サイズです．
+
+電子付録を含まない論文の場合は，ファイルのサイズは10Mバイトを上限とします．電子付録を含む論文の場合は，執筆要領に説明があるファイル形式で1論文につき5ファイルまでファイルサイズは10Mバイトを上限とします．
+
+
+\subsection{フォントについて}
+用いるフォントは原則としてこのテンプレートに倣ってください．
+WORDテンプレートとの整合性をとるため，テンプレートの設定においては1ポイント=1/72インチとし，
+次のようになルールになっています．和文は見出しのみMSゴシック（太字），その他はMS明朝とし，英文は全てTimes New Romanとします．
+
+\noindent フォントのサイズ : 
+\begin{description}
+    \item タイトル 12ポイント
+    \item 著者名 11ポイント
+    \item 要旨 9ポイント
+    \item 本文 9ポイント
+\end{description}
+
+
+\subsection{図表について}
+図表の番号は図1, 表1などとし，キャプションは和文でお願いします．また，図表中の説明は和文と英文のどちらでも可とします（論文単位で統一してください）．次頁の例を参考にしてください．
+
+デジタルカメラやスキャナから図を取り込む場合の解像度の目安は，だいたい300dpiです．もちろん，図の大きさにもよりますので，文字などが十分判別できるように，適宜行ってください．（論文の場合，印刷時に図が判別しにくい場合には，高精細な図を別途お願いすることがあります）図はカラーでも結構です．カラーの図はカラーのまま電子出版されます．
+
+2段にまたがるような大きな図がある場合，2段組の文章と混在させて原稿を作るのが難しいかもしれません．このような場合は，前述のとおり1段組で本文を書いていただいて結構です．また，図がうまく所定の位置に入らない場合は，まず図を選び，マウスの右クリックでメニューを出し，下から2番目の図の書式設定を選び，その中のレイアウトを選んで，四角を選ぶとうまくいきます．
+
+
+% 以下、TeXのための図表説明
+
+%/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+%
+% ----- 1列幅以内に図を表示したい場合 -------------------
+%
+% \begin{figure}
+%  \begin{center}
+%   \includegraphics[width=0.8\linewidth]{./SwissRoll.eps}
+%   \caption{スイスロール}
+%   \label{fig:SwisRoll}
+%  \end{center} 
+% \end{figure}
+%/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+%
+% ----- 2列ぶち抜きでに図を表示したい場合 --------------
+%
+% \begin{figure*}
+%  \begin{center}
+%   \includegraphics[width=0.8\linewidth]{./LegendrePolynomial.eps}
+%   \caption{ルジャンドル多項式. 値域$[-1, 1]$に対して$n=0, 1, 2, 3, 4, 5$の場合. }
+%   \label{fig:Legendre}
+%  \end{center} 
+% \end{figure*}
+%/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+% ----- 表を表示したい場合 --------------
+%\begin{table}
+%   \begin{center}
+%      \lable{tab:hoge}
+%      \caption{特に何を表すでもない例}
+%      \begin{tabular}[c|c|c]
+%      \end{tabular}
+%   \end{center}
+%\end{table}
+%/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+\subsection{句読点について}
+句読点は必ず「, 」「. 」に統一してください.「、」「。」を用いたり両者が混在したりしている原稿が見受けられます. 
+
+
+\subsection{ハイパーリンクの利用について}
+このテンプレートファイルは基本的に冊子体の抄録集を想定して作成されています. しかし, URLを記載することで読者の理解を深めるならば, その利用も可とします. ただし, あくまでも, 永続的に存在するであろうURLに留めてください．
+
+
+\subsection{数式について}
+数式は原則としてTeXの標準機能とAMS（American Mathematical Society，米国数学会）の AMS-LaTeXを利用して下さい. 
+数式が1行内の高さに収まるように下記のように記述してください（ソースコードを参照）．数式内のフォントサイズを変更するために，ボックスコマンドを利用して一度テキストモードにしてフォントサイズを変更した後，再び数式モードにします. 式番号のフォントサイズに変更はありません．
+\begin{equation}
+  \mbox{\small $p(y|\bm{x}) = \frac{p(y){p(\bm{x})}}p(\bm{x}|y)$}
+\end{equation}
+数式には右隅に番号を付けてください．
+スカラ，ベクトル，行列，テンソル，パラメータをどのような記号で表記するかはルールを定めていません．理解に支障がない一般に使われている表記を用い論文中で統一して下さい．
+
+
+\subsection{参考文献について}
+文献は文中で引用された順に番号を付けることとし，スクウェアブラケットで \cite{Tnk}, \cite{Ogw}，\cite{Ksgm} もしくは \cite{Tnk,Ogw,Ksgm} などと記載してください．
+
+著者名は3名までとし，以下はet al. または他，としてください．雑誌はこのテンプレートの例の \cite{Tnk,Ogw} に倣ってください．著書は和・英文ともに，著書名，書名，巻数（版数），発行社名，発行，地名，発行年（西暦），頁，の順に記載し，分担執筆の場合，分担者が明記してある場合はこれを記載してください．このテンプレートの例の \cite{Ksgm,G}に倣ってください．
+
+
+\section{まとめ}
+テンプレートにしたがって原稿作成をお願い致します．投稿時のファイルフォーマットはPDFファイルとしてください．
+
+
+\vspace{10pt}
+\noindent {\bf 謝辞} \ 
+〔例〕研究遂行にあたり貴重なご助言を賜った田中栄一 日本医用画像工学大学名誉教授に深謝いたします．本研究はJSPS科研費 JP12345678の助成を受けたものです．
+\\
+
+\noindent {\bf 利益相反の有無}\\
+著者グループが各々の本務とする機関・団体以外の企業あるいは営利団体との利益相反関係がある場合には，ここに利益相反関係を明示してください．なお，公開の基準については，「利益相反の取り扱いに関する規定」第3条（COI自己申告の基準）を参照のこと．\\
+\noindent \url{http://www.jamit.jp/outline/agreement/rieki.html}
+
+〔例〕本研究の一部は(株)MIT製薬の研究助成金を得て実施された．無い場合は, 「なし」と記述してください．
+
+
+\bibliographystyle{samit}
+\begin{thebibliography}{99}
+  \bibitem{Tnk} 
+      田中栄一：解析的3次元再構成． Med Imag Tech 18: 33-39, 2000
+  \bibitem{Ogw} 
+      {\scriptsize
+      Ogawa K, Harada Y, Ichihara T et al: A practical method for position dependent Compton-scatter correction in single photon emission CT. IEEE Trans Med Imag 10: 408-412, 1991}
+  \bibitem{Ksgm}
+      岸上義彦，橋本良夫：画像解析と細胞診．辻内順平編：応用画像解析．共立出版，東京，1981, pp198-210
+  \bibitem{G}
+      {\scriptsize
+      Muehllehner G: Scintillation Camera Collimators. In: Nucelman S, Patton DD eds. Imaging for Medicine Vol. 1. Plenum Press, New York \& London 1980, pp77-87}
+\end{thebibliography}
+\end{document}
